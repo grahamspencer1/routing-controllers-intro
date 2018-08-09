@@ -29,4 +29,14 @@ class PagesController < ApplicationController
     @kitten_url = "http://picsum.photos/500/500/?random"
   end
 
+  def secrets
+    if params[:magic_word] == "pastword"
+      :secrets
+    else
+      flash[:alert] = "Get outta here ya lazy bum."
+      redirect_to "/welcome"
+    end
+
+  end
+
 end
