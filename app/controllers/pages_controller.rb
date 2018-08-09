@@ -11,7 +11,9 @@ class PagesController < ApplicationController
   end
 
   def contest
-    @header = "Contest cancelled due to pending lawsuits."
+    @header = "Contest!!!!!!!"
+    flash[:notice] = "Contest closed due to pending lawsuits."
+    redirect_to "/welcome"
   end
 
 # Note - Lorem Pixel link is dead, using Picsum instead
