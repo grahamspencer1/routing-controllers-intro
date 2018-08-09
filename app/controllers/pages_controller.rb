@@ -12,4 +12,11 @@ class PagesController < ApplicationController
     @header = "Contest cancelled due to pending lawsuits."
   end
 
+# Note - Random kitten picture link is dead, using Picsum instead
+
+  def kitten
+    requested_size = params[:size]
+    @kitten_url = "http://picsum.photos/500/500/?random"
+  end
+
 end
